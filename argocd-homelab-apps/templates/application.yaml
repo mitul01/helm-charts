@@ -10,8 +10,6 @@ metadata:
 spec:
   project: {{ .project }}
   source:
-    directory:
-      recurse: false
     repoURL: {{ $.Values.sourceRepoUrl }}
     targetRevision: main
     path: ./{{ .project }}/{{ .name }}
