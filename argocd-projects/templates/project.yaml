@@ -9,10 +9,10 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Project
+  description: {{ .description | quote }}
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  {{- range .sourceRepos }}
+  {{- range $.Values.sourceRepos }}
     - {{ . }}
   {{- end }}
   destinations:
