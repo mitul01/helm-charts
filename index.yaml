@@ -3,6 +3,16 @@ entries:
   argocd-homelab-apps:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-04-05T17:58:17.048982974Z"
+    description: A Helm chart for Kubernetes
+    digest: 52b0a393dc4c7fb0e7a84a21740cdda45a0b8cdac63ccb3e965810869049546b
+    name: argocd-homelab-apps
+    type: application
+    urls:
+    - https://github.com/mitul01/helm-charts/releases/download/argocd-homelab-apps-1.0.2/argocd-homelab-apps-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-04-05T16:08:21.044130937Z"
     description: A Helm chart for Kubernetes
     digest: dd2c3f7ec582be7553943ac9fd3d91fef0438a46a73c8fe1f1b96c1f32ce8eaf
@@ -24,6 +34,16 @@ entries:
   argocd-projects:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-04-05T17:58:17.163150404Z"
+    description: A Helm chart for creating root application to manage argocd projects.
+    digest: 0d27f0d752bf429ad77b63317c06384f3ce0ad356042c96ab03a030e063e902b
+    name: argocd-projects
+    type: application
+    urls:
+    - https://github.com/mitul01/helm-charts/releases/download/argocd-projects-1.0.2/argocd-projects-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-04-05T17:33:04.307433634Z"
     description: A Helm chart for creating root application to manage argocd projects.
     digest: 9c5df886422b58237360b4896791b262c6de2b37b7940d6fd593dcade1601884
@@ -42,4 +62,4 @@ entries:
     urls:
     - https://github.com/mitul01/helm-charts/releases/download/argocd-projects-1.0.0/argocd-projects-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-05T17:33:04.307444915Z"
+generated: "2025-04-05T17:58:17.163172335Z"
