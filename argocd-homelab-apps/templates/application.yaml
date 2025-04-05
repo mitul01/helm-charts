@@ -12,7 +12,7 @@ spec:
   source:
     directory:
       recurse: false
-    repoURL: git@github.com:mitul01/homelab-k8s.git
+    repoURL: {{ $.Values.sourceRepoUrl }}
     targetRevision: main
     path: ./{{ .project }}/{{ .name }}
   destination:

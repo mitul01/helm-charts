@@ -1,1 +1,6 @@
-applications: []
+sourceRepoUrl: https://github.com/mitul01/homelab-k8s.git
+applications: 
+    - name: default
+      namespace: default
+      project: default
+      cluster: https://kubernetes.default.svc

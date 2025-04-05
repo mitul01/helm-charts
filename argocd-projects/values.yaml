@@ -1,5 +1,5 @@
 sourceRepos:
-  - git@github.com:mitul01/homelab-k8s.git 
+  - https://github.com/mitul01/homelab-k8s.git  
 projects:
-  - name: ""
-    description: "Project for managing infrastructure related resources"
+  - name: default
+    description: "Default Project"
