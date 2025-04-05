@@ -16,7 +16,8 @@ spec:
     targetRevision: main
     path: ./{{ .project }}/{{ .name }}
   destination:
-    name: {{ .cluster }}
+    server: {{ .cluster }}
+    namespace: {{ .namespace }}
   syncPolicy:
     automated:
       prune: true
