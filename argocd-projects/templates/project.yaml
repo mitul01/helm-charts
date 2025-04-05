@@ -12,7 +12,7 @@ spec:
   description: {{ .description | quote }}
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  {{- range $.Values.sourceRepos }}
+  {{- range .sourceRepos }}
     - {{ . }}
   {{- end }}
   destinations:
