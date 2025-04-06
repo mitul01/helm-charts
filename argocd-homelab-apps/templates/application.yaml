@@ -11,13 +11,17 @@ spec:
   project: {{ .project }}
   source:
     {{ if eq .type "helm" }}
-    repoURL: {{ .repoUrl }}
-    chart: {{ .chartName }}
-    targetRevision: {{ .chartVersion }}
-    helm:
-      releaseName: {{ .name }}
-      valueFiles:
-      - {{ .valuesFilePath }}
+    - repoURL: {{ .repoUrl }}
+      chart: {{ .chartName }}
+      targetRevision: {{ .chartVersion }}
+      helm:
+        releaseName: {{ .name }}
+        valueFiles:
+        - $values/{{ .values.path }}
+        ignoreMissingValueFiles: true
+    - repoURL: {{ .values.repo }}
+      targetRevision: main
+      ref: values
     {{ end }}
     {{ if eq .type "k8s" }}
     repoURL: {{ .repoUrl }}
