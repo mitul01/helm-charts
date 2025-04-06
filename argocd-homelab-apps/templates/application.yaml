@@ -11,6 +11,7 @@ spec:
   project: {{ .project }}
   source:
     {{ if eq .type "helm" }}
+    repoURL: {{ .repoUrl }}
     chart: {{ .chartName }}
     chartVersion: {{ .chartVersion }}
     helm:
