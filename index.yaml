@@ -3,6 +3,16 @@ entries:
   argocd-homelab-apps:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-04-06T15:33:57.888754948Z"
+    description: A Helm chart for Kubernetes
+    digest: 8d37438c87d815f65f98b73ccd00e150b2265af90e4d9c6e923c437a2a5b44f1
+    name: argocd-homelab-apps
+    type: application
+    urls:
+    - https://github.com/mitul01/helm-charts/releases/download/argocd-homelab-apps-1.0.4/argocd-homelab-apps-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-04-06T15:07:08.574212757Z"
     description: A Helm chart for Kubernetes
     digest: 1e62ce9e30c23f73140d6a25a8f0881a522aa77076a05834a90b27c4d3a0be6c
@@ -82,4 +92,4 @@ entries:
     urls:
     - https://github.com/mitul01/helm-charts/releases/download/argocd-projects-1.0.0/argocd-projects-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-06T15:07:08.574238184Z"
+generated: "2025-04-06T15:33:57.888785546Z"
