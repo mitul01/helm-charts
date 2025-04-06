@@ -9,8 +9,8 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: {{ .project }}
-  source:
-    {{ if eq .type "helm" }}
+  {{ if eq .type "helm" }}
+  sources:
     - repoURL: {{ .repoUrl }}
       chart: {{ .chartName }}
       targetRevision: {{ .chartVersion }}
@@ -22,12 +22,13 @@ spec:
     - repoURL: {{ .values.repo }}
       targetRevision: main
       ref: values
-    {{ end }}
-    {{ if eq .type "k8s" }}
+  {{ end }}
+  {{ if eq .type "k8s" }}
+  source:
     repoURL: {{ .repoUrl }}
     targetRevision: main
     path: ./{{ .project }}/{{ .name }}
-    {{ end }}
+  {{ end }}
   destination:
     server: {{ .cluster }}
     namespace: {{ .namespace }}
