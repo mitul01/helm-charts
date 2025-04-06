@@ -1,6 +1,16 @@
-sourceRepoUrl: https://github.com/mitul01/homelab-k8s.git
 applications: 
     - name: default
+      type: k8s
       namespace: default
       project: default
       cluster: https://kubernetes.default.svc
+      repoUrl: https://github.com/mitul01/homelab-k8s.git
+    - name: default
+      type: helm
+      namespace: default
+      project: default
+      cluster: https://kubernetes.default.svc
+      repoUrl: https://github.com/mitul01/homelab-k8s.git
+      valuesFilePath: values.yaml
+      chartVersion: 1.0.0
+      chartName: default

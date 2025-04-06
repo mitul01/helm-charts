@@ -10,9 +10,19 @@ metadata:
 spec:
   project: {{ .project }}
   source:
-    repoURL: {{ $.Values.sourceRepoUrl }}
+    {{ if eq .type "helm" }}
+    chart: {{ .chartName }}
+    chartVersion: {{ .chartVersion }}
+    helm:
+      releaseName: {{ .name }}
+      valueFiles:
+      - {{ .valuesFilePath }}
+    {{ end }}
+    {{ if eq .type "k8s" }}
+    repoURL: {{ .repoUrl }}
     targetRevision: main
     path: ./{{ .project }}/{{ .name }}
+    {{ end }}
   destination:
     server: {{ .cluster }}
     namespace: {{ .namespace }}
