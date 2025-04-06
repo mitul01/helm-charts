@@ -13,7 +13,7 @@ spec:
     {{ if eq .type "helm" }}
     repoURL: {{ .repoUrl }}
     chart: {{ .chartName }}
-    chartVersion: {{ .chartVersion }}
+    targetRevision: {{ .chartVersion }}
     helm:
       releaseName: {{ .name }}
       valueFiles:
